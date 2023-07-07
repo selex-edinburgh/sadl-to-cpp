@@ -1,0 +1,21 @@
+[%import "sadl2cpp.eol";%]
+/*** Output for [%=targetName%] ***/
+
+#include <iostream>
+#include <string>
+
+int main() {
+
+    std::cout << "Output for [%=targetName%]!";
+    
+[%for (map in containermapping) { %]
+    string [%=map.processor.name.firstToLowerCase%] = "[%=map.container.name%]";
+[% } %]
+
+[%for (v in values) { %]
+    string [%=v.property.name.firstToLowerCase%] = "[%=v.value%]";
+[% } %]
+
+    
+    return 0;
+}

@@ -1,0 +1,20 @@
+import "sadl2cpp.eol";
+
+/***
+M1 is model
+***/
+
+rule Sadl2Cpp
+	transform  link : M!Link {
+	guard: getDeployedLinks().includes(link)
+	parameters :
+		Map {
+			"link" = link,
+			"processors" = link.processors,
+			"values" = link.value,
+	   		"targetName" = link.eContainer.name + "_" + link.name
+		}
+	template : selectTemplate(link.transport) + "_to_cpp.egl"
+	target : "../cpp/" + link.eContainer.name + "_" + link.name + ".cpp"
+}
+

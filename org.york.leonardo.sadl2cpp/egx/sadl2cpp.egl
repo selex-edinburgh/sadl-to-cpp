@@ -1,0 +1,24 @@
+[%
+/***
+
+***/
+import "sadl2cpp.eol";
+
+for (deployment in M!Deployment.all) {
+	for (entry in deployment.connectionmapping) {
+		var link = entry.link;
+		var processors =  deployment.containermapping.collect(cm | cm.processor);
+		var templatePrefix = selectTemplate(link.transport);
+		var template : Template = TemplateFactory.load( templatePrefix + "_to_cpp.egl");
+		
+		template.populate("link",link);
+		template.populate("processors", processors);
+		template.populate("containermapping", deployment.containermapping);
+		template.populate("values", link.value);
+	   	template.populate("targetName", deployment.name + "_" + link.name);
+	   	
+		template.generate("../cpp/" + deployment.name + "_" + link.name + ".cpp");
+	}
+}
+
+%]

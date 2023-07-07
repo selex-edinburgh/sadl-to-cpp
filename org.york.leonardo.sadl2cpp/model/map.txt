@@ -1,0 +1,59 @@
+{
+    name:"TechA",
+    real_name:"Direct"
+}
+{
+    name:"TechB",
+    real_name:"TCP"
+}
+{
+    name:"TechC1",
+    real_name:"UDP_Unicast"
+}
+{
+    name:"TechC2",
+    real_name:"UDP_Multicast"
+}
+
+{
+    name:"TechC3",
+    real_name:"UDP_Broadcast",
+    properties:
+    [
+        {
+            name:"ip",
+            type:"string"
+        },        
+        {
+            name:"port",
+            type:"number"
+        },
+    ]
+}
+
+{
+    TechA:"techa_to_cpp.egl",
+    TechB:"techb_to_cpp.egl",
+    TechC1:"techc1_to_cpp.egl",
+    TechC2:"techc2_to_cpp.egl",
+    TechC3:"techc3_to_cpp.egl"
+}
+
+{
+    {id:"connect1", type:"TechA", src:"comp1", tgt:"comp2"},
+    {id:"connect2", type:"TechB", src:"comp1", ip:"127.0.0.1", port:127},
+    {id:"connect3", type:"TechC1", src:"comp1", ip:"127.0.0.1", port:127},
+    {id:"connect4", type:"TechC2", src:"comp1", ip:"127.0.0.1", port:127, multicast:"223.20.12.1"},
+    {id:"connect5", type:"TechA", src:"comp1",
+}
+
+//
+
+//Transformed connect1
+Direct
+
+//Transformed connect2
+TCP 127.0.0.1:127
+
+//Transformed connect3
+UDP 127.0.0.1:127
