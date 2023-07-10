@@ -7,7 +7,8 @@
     <intAttribute key="generateTo" value="1"/>
     <stringAttribute key="implementation_name" value="EGL (Default)"/>
     <listAttribute key="models">
-        <listEntry value="aliases=M&#10;reuseUnmodifiedFileBasedMetamodels=true&#10;modelFile=/org.york.leonardo.sadl2cpp/model/sample.sadl.xmi&#10;metamodelUri=&#10;concurrent=false&#10;type=EMF&#10;readOnLoad=true&#10;storeOnDisposal=true&#10;expand=true&#10;fileBasedMetamodelUri=platform\:/resource/org.york.leonardo.sadl2cpp/model/SADL.ecore&#10;metamodelFile=/org.york.leonardo.sadl2cpp/model/SADL.ecore&#10;cached=true&#10;name=M&#10;modelUri=platform\:/resource/org.york.leonardo.sadl2cpp/model/sample.sadl.xmi&#10;isMetamodelFileBased=true&#10;validate=false"/>
+        <listEntry value="aliases=M&#10;reuseUnmodifiedFileBasedMetamodels=true&#10;modelFile=/org.york.leonardo.sadl2cpp/model/sample.sadl.xmi&#10;metamodelUri=&#10;concurrent=false&#10;type=EMF&#10;readOnLoad=true&#10;storeOnDisposal=false&#10;expand=true&#10;fileBasedMetamodelUri=platform\:/resource/org.york.leonardo.sadl2cpp/model/SADL.ecore&#10;metamodelFile=/org.york.leonardo.sadl2cpp/model/SADL.ecore&#10;cached=true&#10;name=M&#10;modelUri=platform\:/resource/org.york.leonardo.sadl2cpp/model/sample.sadl.xmi&#10;isMetamodelFileBased=true&#10;validate=false"/>
+        <listEntry value="storeOnDisposal=false&#10;aliases=Config&#10;file=/org.york.leonardo.sadl2cpp/egx/conf.yaml&#10;cached=true&#10;name=Config&#10;concurrent=false&#10;type=YAML&#10;readOnLoad=true&#10;fileBased=true"/>
     </listAttribute>
     <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
     <stringAttribute key="outputDirPath" value=""/>

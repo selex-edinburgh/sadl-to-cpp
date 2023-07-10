@@ -32,3 +32,4 @@
 *.app
 /org.york.leonardo.sadl2cpp/.settings/org.eclipse.core.resources.prefs
 *.cpp
+/org.york.leonardo.sadl2cpp/cpp/*

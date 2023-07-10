@@ -14,7 +14,7 @@ rule Sadl2Cpp
 			"values" = link.value,
 	   		"targetName" = link.eContainer.name + "_" + link.name
 		}
-	template : selectTemplate(link.transport) + "_to_cpp.egl"
+	template : selectTemplate(link.transport) + ".egl"
 	target : "../cpp/" + link.eContainer.name + "_" + link.name + ".cpp"
 }
 

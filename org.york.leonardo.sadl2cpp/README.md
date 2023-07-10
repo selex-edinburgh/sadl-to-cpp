@@ -9,7 +9,7 @@ The generated cpp files from the [SADL model](model/sample.sadl) under the `mode
 
 int main() {
 
-    std::cout << "Output for dep1_p1top2TCP!";
+    std::cout << "Output for dep1_p1top2TCP";
     
     string proc1 = "cont1";
     string proc2 = "cont2";
@@ -31,7 +31,7 @@ int main() {
 
 int main() {
 
-    std::cout << "Output for dep1_p1top2UDP!";
+    std::cout << "Output for dep1_p1top2UDP";
     
     string proc1 = "cont1";
     string proc2 = "cont2";

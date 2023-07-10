@@ -7,20 +7,19 @@ operation getDeployedLinks() {
 	for (deploy in Deployment.all) {
 		links.addAll(deploy.connectionmapping.collect(cm | cm.link));
 	}
-	links.println;
 	return links; 
 }
 
 operation selectTemplate(transport : M!Transport) {
-	transport.println;
 	var templateName = null;
-	if (transport.name.equals("TCP")){
-		templateName = "tech1";
-	} else if (transport.name.equals("UDP_Unicast")){
-		templateName = "tech2";
-	} else if (transport.name.equals("PCIe")){
-		templateName = "tech3";
-	}
+	templateName = Config!Node.all.selectOne(n | n.name == transport.name).s_value;
+//	if (transport.name.equals("TCP")){
+//		templateName = "tech1_to_cpp";
+//	} else if (transport.name.equals("UDP_Unicast")){
+//		templateName = "tech2_to_cpp";
+//	} else if (transport.name.equals("PCIe")){
+//		templateName = "tech3_to_cpp";
+//	}
 		
 	return templateName;
 }
